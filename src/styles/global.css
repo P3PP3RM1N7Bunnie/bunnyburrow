@@ -1,523 +1,582 @@
+ :root {
+            --primary: #ff69b4;
+            --secondary: #ffd6e9;
+            --accent: #ffbaf1;
+            --text: #665566;
+            --window-bg: rgba(255, 255, 255, 0.95);
+        }
 
-:root{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background-color: var(--secondary);
+            font-family: 'Comic Sans MS', cursive;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(#fff 20%, transparent 20%),
+                radial-gradient(#fff 20%, transparent 20%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px;
+        }
 
-    --primary-color :linear-gradient(rgba(229,228,255),rgb(159, 45, 253));
-    --secondary-color: rgb(207, 149, 255);
-    --tertiary-color:rgba(226, 238, 255, 0.533);
-    --pastel-color:rgba(255, 255, 227, 0.342);
-    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.143), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     --dark-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.318), 0 6px 20px 0 rgba(0, 0, 0, 0.441);
-    --font-dark-color: black;
-    --background-image: url('https://i.pinimg.com/originals/aa/6a/0e/aa6a0e9ecb4be2a2881d976eb70d4216.jpg');
+        .desktop-icons {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 1;
+        }
 
-   --purple-color: rgb(150, 0, 250);
+        .desktop-icon {
+            width: 80px;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
 
-}
+        .desktop-icon:hover {
+            transform: scale(1.1);
+        }
 
-#app-mount .bg__12180{
-    background: var(--background-image);
-  background-position: var(--background-image-position, center);
-  background-size: var(--background-image-size, cover);
-}
+        .desktop-icon img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            border: 2px solid var(--primary);
+            background: white;
+            padding: 5px;
+        }
 
+        .desktop-icon span {
+            color: var(--text);
+            font-size: 12px;
+            text-shadow: 1px 1px 0 white;
+        }
 
-/* THEME CSS  */
+        .window {
+            background: var(--window-bg);
+            border: 3px solid var(--primary);
+            border-radius: 15px;
+            width: 350px;
+            position: absolute;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: move;
+            backdrop-filter: blur(5px);
+            display: none;
+        }
 
-/* ------------------------------------------> */
-.theme-dark{
-border-radius: 2vw;
---background-primary: transparent;
-  
- 
-  --background-tertiary:  rgb(255, 248, 201);
- 
-  --background-floating: black;
- 
-  --background-modifier-hover: rgb(255, 255, 255, 0.05);
-  --background-modifier-active: rgb(255, 255, 255, 0.07);
-  --background-modifier-selected: rgb(255, 255, 255, 0.1);
-  --channel-icon: rgb(141, 56, 0);
-}
+        .window.active {
+            display: block;
+        }
 
-.theme-dark .themed_b152d4{
-    border: 0.2vw solid wheat;
-    background: rgb(216, 131, 255);
-    border-radius: 1vw;
-  width: 60vw;
-  box-shadow: var(--dark-shadow);
-  
-  
-  
-}
-.subtitleContainer_f50402{
-    align-items: center;
-    
-    margin-left: -14vw;
-    margin-top: 1vw;
-    margin-bottom: 1.5vw;
-}
-.overlayBackground__345c9{
-    border-radius: 1.5vw;
-}
-/* note */
-.textarea__0461c{
-    border-radius: 0.7vw;
-    padding-left: 1vw;
-    padding-top: 1vw;
-    background-color: var(--tertiary-color);
-    font-size: 1vw;    
-}
+        .window-title {
+            background: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
 
-.role_d81130{
-    border-radius: 2vw;
-    background-color: rgba(255, 255, 255, 0.171);
-     box-shadow: var(--shadow);
-   
-}
-.roleNameOverflow__27401{
-   text-transform: lowercase;
-   color: var(--font-dark-color);
-   font-weight: bold;
-    
-}
-.nickname_db3773{
-    color: var(--font-dark-color);
-}
-.messageInputContainer_a93946{
-     border-radius: 2vw;
-}
-.usernameSection_dd6196, .customStatusSection_c9f9ba{
-    padding-left: 1.4vw;
-}
+        .buttons {
+            display: flex;
+            gap: 8px;
+        }
 
-.userTagUsernameBase__2bd24{
-    color: rgb(88, 86, 86);
-}
+        .button {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
 
-.profileBadges__1f2ab.profileBadges__1f2ab{
-      border-radius: 2vw;
-     
-}
-.container__26baa *{
-    color: rgb(255, 220, 226);
-}
+        .button:hover {
+            transform: scale(1.1);
+        }
 
-.bannerSVGWrapper__8a38c{
-    background-color: rgb(255, 220, 226);
-}
-.overlayBackground__345c9{
-    background-color: var(--secondary-color);
-    
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+        .content {
+            padding: 15px;
+            font-size: 14px;
+            color: var(--text);
+            max-height: 400px;
+            overflow-y: auto;
+        }
 
-.lookFilled__950dd.colorPrimary_ebe632{
-      border-radius: 2vw;
-      padding: 0.4vw;
-}
-.banner__6d414.popoutBanner__3fbe8{
+        .content img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
 
-    background:linear-gradient(rgb(217, 91, 255),rgba(185, 64, 255, 0.451)) !important;
-    
-}
-.userProfileInnerThemedNonPremium_b64fb4{
-    background: var(--primary-color);
-    
-}
-.text-sm-normal__95a78{
-    color: var(--font-dark-color);
-}
-.label__563c3 {
-    
-    font-weight: bold;
-}
-.itemizedListText_a6446d{
-    color: var(--font-dark-color) !important;
-}
-.discordIcon__1e1be{
-    color: var(--font-dark-color);
-}
-.defaultColor__8610e{
-    color: var(--font-dark-color);
-}
-.colorDefault_e361cf{
-    color: var(--font-dark-color);
-}
-/* //background  */
-.bg__12180{
-    background: var(--primary-color);
-}
-.wrapper__216eb{
-    background: none;
-}
-/* sidebar */
-.container__7e23c{
-    background: none;
-    border: 5px solid var(--tertiary-color);
-    border-radius: 1.5vw;
-    margin: 0.4vw;
-    box-shadow: var(--dark-shadow);
-}
-.content__76dcf{
-    background: none;
-    
-}
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
 
-.sidebar_e031be{
-    background: none;
-   
-}
-.theme-dark .container__7e23c{
-    background: none;
-    
-}
-.name__4eb92{
-    color: black;
-   
-    font-weight: 700;
-}
-.overflow__993fa {
-    color: black;
-    text-transform: lowercase;
-    
-}
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+        }
 
-/* channels */
+        .profile-info h3 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
 
-.containerDefault_e3b32b, .containerDragBefore__1b24b, .containerDragAfter_e03e10, .containerUserOver__91b97{
-    
-    border-radius: 0.5vw;
-    text-align: center;
-   padding: 0vw;
-  margin-top: 10px;
-   background-color: rgb(255, 147, 147);
-   margin-left: 0.5vw;
-   width: 11vw;
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
 
-}
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.2s;
+        }
 
-.wrapper__612a5{
-    background: rgb(255, 214, 214);
-    border-radius: 0.5vw;
-    margin-bottom: 9px;
-    margin-right: 10px;
-    margin-top: 9px;
-    box-shadow: var(--shadow);
-    border: 5.2px solid white;
-}
-.panels__58331{
-    background: none;
-}
-/* down profile */
-.app_de4237 button{
-    color: rgb(255, 0, 200);
-}
-.lottieIcon_c7076c :not(defs *)[fill][fill-opacity]{
-    fill: rgb(81, 0, 0);
-}
-.theme-dark .container_debb33{
-      background: rgb(216, 131, 255);
-   width: 13vw;
-    border-radius: 0.5vw;
-    margin: 0.5vw;
-    padding: 0vw 0vw;
-    border: 4px dashed wheat;
-    box-shadow: var(--dark-shadow);
-    
-}
-.title__4a7a9{
-    color: black;
-    font-weight: bold;
-}
+        .social-link:hover {
+            transform: scale(1.05);
+        }
 
-.default__74311, .hovered__5a165{
-    color: black;
-    font-weight: bolder;
-   
-    
-}
+        .social-link img {
+            width: 20px;
+            height: 20px;
+        }
 
-/* guilds server */
-.expandedFolderBackground_b1385f {
-    background: rgba(132, 0, 255, 0.691);
-    box-shadow: var(--dark-shadow);
-  
-   
-}
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
 
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
 
-.expandedFolderIconWrapper__324c1 svg{
-    color: wheat !important;
-}
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
 
-.circleIconButton__05cf2{
-    color: wheat;
-    background-color: rgb(59, 59, 59);
-     
-}
-.childWrapperNoHoverBg__7e8f1{
-    background: rgb(150, 0, 250);
-    color: wheat;
-   
-}
+        .menu {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: 3px solid var(--primary);
+            display: flex;
+            gap: 25px;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-.svg__34dd4{
-    box-shadow: var(--dark-shadow);
-    border-radius: 50%;
-}
-/* .textbox */
+        .menu-item {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
 
-.inner__9fd0b{
-    background: var(--background-tertiary);
-    
-}
-#app-mount .form_d8a4a1 {
-  margin-top: 0;
-}
-#app-mount .form_d8a4a1 .attachButton__56f98 {
-  padding: 10px;
-}
-#app-mount .form_d8a4a1 .placeholder__443e5,
-#app-mount .form_d8a4a1 .slateTextArea_b19976 {
-  padding-left: 5px;
-}
+        .menu-item:hover {
+            color: #ff1493;
+            transform: scale(1.1);
+        }
 
-.themedBackground__3a4c0{
-    background: transparent;
- border-radius: 0.5vw;
-    margin: 0.5vw;
-    padding: 0vw 0vw;
-    border: 4px dashed rgb(255, 179, 0);
-    box-shadow: var(--dark-shadow);
-}
-.active__6a892 {
-    margin-left: -5px;
-}
-/* body  */
+        .menu-item img {
+            width: 20px;
+            height: 20px;
+        }
 
-.scrollerContent__94ac9 {
-    background: none;
-}
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
 
-/* right-part */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideIn 0.5s ease-out;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-.members__573eb{
-    background-color: rgb(255, 147, 147);
-    border-top: 5px dashed rgb(116, 0, 161);
-    border-right: 5px dashed rgb(116, 0, 161);
-    border-left: 5px dashed rgb(116, 0, 161);
-    border-top-left-radius: 0.5vw;
-     border-top-right-radius: 0.5vw;
-    margin-top: 0.5vw;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    box-shadow: var(--dark-shadow);
-    
-    
-}
-.container_f79ab4{
-    background: none;
-    
-}
-.member_b44d5d{
-    background: rgb(255, 214, 214);
-    border-radius: 0.5vw;
-    border: 3px dashed rgb(1, 0, 2);
-    margin-bottom: 10px;
-    color: black;
-    
-}
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
 
-.membersGroup_cad095 {
-    color: black;
-    font-weight: bolder;
-    margin-bottom: 10px;
-}
-/* SODEBAR SETTING */
-.sidebarRegionScroller__8113e{
-    background: none;
-}
-.sidebar__02e8d{
-    background: rgb(255, 209, 217);
-    padding: 2vw;
-    
-    border: 4px dashed white;
-    border-radius: 1vw;
-    box-shadow: var(--dark-shadow) , var(--dark-shadow);
-}
-.eyebrow_b3f8ba{
-    color: black;
-    font-weight: bolder;
+        .music-player {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 10px;
+            width: 250px;
+            z-index: 999;
+        }
 
-}
-.side_b4b3f6 .item__48dda{
-    color: rgb(97, 97, 97);
-}
+        .music-player img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
 
-/* Text Edits */
+        .music-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
 
-.subtitle__8dcdc.noChildren_b775d8{
-    color: black !important;
-    font-weight: bolder;
-}
-.cozy_f5c119 .messageContent_abea64{
-    color: black;
-    font-weight: 700;
-   
-}
+        .music-control {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
 
-.wrapper__53064{
-    background-color: rgb(92, 0, 0);
-   
-}
+        .music-control:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-icons">
+        <div class="desktop-icon" onclick="toggleWindow('profile')">
+            <img src="https://files.catbox.moe/kmf4bc.gif" alt="Profile Icon">
+            <span>My Profile</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleWindow('gallery')">
+            <img src="https://files.catbox.moe/3bobcc.gif" alt="Gallery Icon">
+            <span>Gallery</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleWindow('blog')">
+            <img src="https://files.catbox.moe/ia8u2v.gif" alt="Blog Icon">
+            <span>Blog</span>
+        </div>
+    </div>
 
-.group-spacing-16 .groupStart__7b93c{
-   
-    border-radius: 1vw;
-    margin: 15px;
-    
-    
-}
+    <div id="profile" class="window" style="top: 50px; left: 150px;">
+        <div class="window-title">
+            ✨ My Profile ✨
+            <div class="buttons">
+                <div class="button" style="background: #ffff4d;" onclick="minimizeWindow('profile')"></div>
+                <div class="button" style="background: #ff6b6b;" onclick="closeWindow('profile')"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="profile-card">
+                <img src="https://files.catbox.moe/yscv85.gif" alt="Profile Picture" class="profile-image">
+                <div class="profile-info">
+                    <h3>[Your Name]</h3>
+                    <p>✨ Digital Artist</p>
+                    <p>🌸 Web Developer</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/og4nft.gif" alt="Twitter">
+                    Twitter
+                </a>
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/7tzc9c.gif" alt="Instagram">
+                    Instagram
+                </a>
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/dtal07.gif" alt="GitHub">
+                    GitHub
+                </a>
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/e0ep7c.gif" alt="DeviantArt">
+                    DeviantArt
+                </a>
+            </div>
+        </div>
+    </div>
 
-.cozy_f5c119 .timestamp_c79dd2{
-    color: black !important;
-    font-weight: bolder;
-}
+    <div id="gallery" class="window" style="top: 100px; left: 550px;">
+        <div class="window-title">
+            🎨 My Gallery 🎨
+            <div class="buttons">
+                <div class="button" style="background: #ffff4d;" onclick="minimizeWindow('gallery')"></div>
+                <div class="button" style="background: #ff6b6b;" onclick="closeWindow('gallery')"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gallery">
+                <img src="https://files.catbox.moe/cg2dzq.jpg" alt="Artwork 1">
+                <img src="https://files.catbox.moe/zwtdmj.jpg" alt="Artwork 2">
+                <img src="https://files.catbox.moe/unju81.jpg" alt="Artwork 3">
+                <img src="https://files.catbox.moe/qgkkhs.jpg" alt="Artwork 4">
+            </div>
+        </div>
+    </div>
 
-.username__0b0e7{
-    color: black !important;
-    font-weight: bolder;
-    font-size: 1.1vw;
-}
-.embed_cc6dae code{
-    color: black;
-    font-weight: 700;
-    background: rgb(255, 223, 228);
-}
-.goalText__38c12{
-    color: black !important;
-}
-.text-xs-normal__46d75{
-     color: black !important;
-     font-weight: bolder;
-}
-.container__26baa *{
-    color: rgb(86, 0, 0);
-}
-.fontSize16Padding_bcbeae{
-    color: rgb(86, 0, 0);
-    font-weight: bolder;
-}
-.buttonWrapper_bd4bd7 svg{
-    color: red !important;
-}
+    <div id="blog" class="window" style="top: 150px; left: 350px;">
+        <div class="window-title">
+            📝 Blog Posts 📝
+            <div class="buttons">
+                <div class="button" style="background: #ffff4d;" onclick="minimizeWindow('blog')"></div>
+                <div class="button" style="background: #ff6b6b;" onclick="closeWindow('blog')"></div>
+            </div>
+        </div>
+        <div class="content">
+            <article style="margin-bottom: 20px;">
+                <img src="https://files.catbox.moe/31ivbg.jpg" alt="Blog Post 1">
+                <h3 style="color: var(--primary); margin: 10px 0;">My Latest Project ✨</h3>
+                <p>Working on something super kawaii! Stay tuned for more updates...</p>
+            </article>
+            <article>
+                <img src="https://files.catbox.moe/silz40.jpg" alt="Blog Post 2">
+                <h3 style="color: var(--primary); margin: 10px 0;">Art Process 🎨</h3>
+                <p>Here's a peek into how I create my digital illustrations!</p>
+            </article>
+        </div>
+    </div>
 
-.spriteGreyscale__750f4{
-    background-color: rgb(68, 0, 0) !important;
-}
-.optionLabel_a33d86{
-    color: wheat;
-}
-.scroller__8f066{
-    background-color:rgba(255, 246, 229, 0.67) !important;
-  
-}
+    <div class="menu">
+        <a href="#" class="menu-item" onclick="toggleWindow('profile')">
+            <img src="https://files.catbox.moe/9gnuwx.gif" alt="Profile">
+            Profile
+        </a>
+        <a href="#" class="menu-item" onclick="toggleWindow('gallery')">
+            <img src="https://files.catbox.moe/0e0gxm.gif" alt="Gallery">
+            Gallery
+        </a>
+        <a href="#" class="menu-item" onclick="toggleWindow('blog')">
+            <img src="https://files.catbox.moe/3bobcc.gif" alt="Blog">
+            Blog
+        </a>
+    </div>
 
-html,body{
+    <div class="music-player">
+        <img src="https://files.catbox.moe/fabe5z.jpg" alt="Album Art">
+        <div class="music-controls">
+            <div class="music-control">⏮</div>
+            <div class="music-control">▶</div>
+            <div class="music-control">⏭</div>
+        </div>
+    </div>
 
-  cursor: url('https://cdn.custom-cursor.com/db/18620/32/color-pale-pink-cursor.png'),auto;
+    <script>
+        // Make windows draggable
+        const windows = document.querySelectorAll('.window');
+        windows.forEach(makeWindowDraggable);
 
+        function makeWindowDraggable(element) {
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            element.querySelector('.window-title').onmousedown = dragMouseDown;
 
-}
-.privateChannels__9b518{
-    background: none;
-}
-.theme-dark .scroller__89969{
-    background: rgb(193, 179, 245)  ;
-    border: 5px solid wheat;
-    border-radius: 1vw;
-    box-shadow: var(--dark-shadow);
-    margin: 0.7vw;
-}
-.content_b5e449 {
-    color: rgb(68, 0, 0);
-    
-}
-.name_f842e4{
-    font-weight: bolder;
-    
-}
+            function dragMouseDown(e) {
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+                bringToFront(element);
+            }
 
-.avatar__7bd22{
-    color: darkred;
-}
-.headerText__88997{
-    color: darkred;
-    font-weight: bolder;
-    
-}
-.nowPlayingColumn_b025fe{
-    background: none;
-    
-}
+            function elementDrag(e) {
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                element.style.top = (element.offsetTop - pos2) + "px";
+                element.style.left = (element.offsetLeft - pos1) + "px";
+            }
 
-.container__3673d{
-     background: rgb(193, 179, 245)  ;
-    border: 5px solid wheat;
-    border-radius: 1vw;
-    box-shadow: var(--dark-shadow);
-    margin: 0.7vw;
-}
-.scroller__7c25e{
-    border: none;
-    
-}
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
 
-.image__08515{
-    width: 30vw !important;
-    height: 15vw !important;
-    filter: drop-shadow(16px 16px 20px rgb(255, 244, 146));
-}
+        function bringToFront(element) {
+            windows.forEach(win => win.style.zIndex = "1"); element.style.zIndex = "2";
+        }
 
-.tabBar__73938 .item_e4ca95{
-    color: rgb(94, 0, 0);
-    font-weight: bolder;
-}
-.tabBar__73938 .addFriend__4c0a2.addFriend__4c0a2.addFriend__4c0a2{
-    background: lightgreen;
-    border: 3px dashed darkred;
-}
-.searchBar__621ec .searchBarComponent__8f95f{
-    color: darkred;
-    background-color: lightgreen;
-    font-weight: bolder;
-    border: 3px dashed darkred;
-}
-.medium__5b9a9 .input__48d49, .medium__5b9a9 .tag__3ba94{
-     color: darkred;
-    background-color: rgb(246, 255, 246);
-    font-weight: bolder;
-   
-}
-.username__267df{
-    color: black;
-    font-weight: bolder;
-}
-.text_bd79a3{
-    color: grey;
-    font-weight: bolder;
-}
+        // Window management functions
+        function toggleWindow(id) {
+            const window = document.getElementById(id);
+            if (window.classList.contains('active')) {
+                window.classList.remove('active');
+            } else {
+                window.classList.add('active');
+                bringToFront(window);
+            }
+        }
 
-.actionButton__2b4bb{
-    background-color: darkred;
-   
-}
-.icon__4ee3f{
-    color: wheat;
-}
+        function closeWindow(id) {
+            document.getElementById(id).classList.remove('active');
+        }
 
-.title_c42cad{
-    color: black;
-    font-weight: bolder;
-}
+        function minimizeWindow(id) {
+            const window = document.getElementById(id);
+            window.style.transform = 'scale(0.1)';
+            setTimeout(() => {
+                window.classList.remove('active');
+                window.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Sparkle effect
+        function createSparkle(e) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.animation = 'sparkle 1s linear forwards';
+            sparkle.textContent = '✨';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() < 0.1) createSparkle(e);
+        });
+
+        // Notification system
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <img src="https://files.catbox.moe/px4tkj.gif" alt="Notification Icon">
+                <div>
+                    <strong>✨ Notice</strong>
+                    <p>${message}</p>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.style.animation = 'slideIn 0.5s ease-out reverse';
+                setTimeout(() => notification.remove(), 500);
+            }, 3000);
+        }
+
+        // Show welcome notification on load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                showNotification('Welcome to my kawaii space! ૮ ˶ᵔ ᵕ ᵔ˶ ა');
+            }, 1000);
+        });
+
+        // Music player functionality
+        const musicControls = document.querySelectorAll('.music-control');
+        let isPlaying = false;
+
+        musicControls.forEach(control => {
+            control.addEventListener('click', () => {
+                if (control.textContent === '▶') {
+                    control.textContent = isPlaying ? '▶' : '⏸';
+                    isPlaying = !isPlaying;
+                }
+                control.style.transform = 'scale(0.9)';
+                setTimeout(() => control.style.transform = 'scale(1)', 100);
+            });
+        });
+
+        // Random floating elements
+        function createFloatingElement() {
+            const elements = ['🌸', '✨', '💖', '🌟', '🎀'];
+            const element = document.createElement('div');
+            element.style.position = 'fixed';
+            element.style.left = Math.random() * window.innerWidth + 'px';
+            element.style.top = window.innerHeight + 'px';
+            element.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            element.style.pointerEvents = 'none';
+            element.style.animation = 'float 3s ease-in-out infinite';
+            element.textContent = elements[Math.floor(Math.random() * elements.length)];
+            document.body.appendChild(element);
+            setTimeout(() => element.remove(), 3000);
+        }
+
+        setInterval(createFloatingElement, 2000);
+
+        // Easter egg - click counter
+        let clickCount = 0;
+        document.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 10) {
+                showNotification('You found a secret! 🎉');
+                document.body.style.animation = 'rainbow 3s infinite';
+            }
+        });
+
+        // Add rainbow animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes rainbow {
+                0% { background-color: var(--secondary); }
+                33% { background-color: #ffd6ff; }
+                66% { background-color: #d6ffff; }
+                100% { background-color: var(--secondary); }
+            }
+
+            @keyframes sparkle {
+                0% { transform: scale(0) rotate(0deg); opacity: 0; }
+                50% { transform: scale(1) rotate(180deg); opacity: 1; }
+                100% { transform: scale(0) rotate(360deg); opacity: 0; }
+            }
+        `]
