@@ -1,201 +1,18 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-  <link rel="shortcut icon" type="image/svg" href="bunnyburrow/public/favicon.svg">
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-	 <meta charset="UTF-8">
-    <title>Bunny Burrow</title>
-
-    <style type="text/css">
-        .splash span {
-            transform-origin: 50% 50% 80px;
-            transform: rotateX(0deg);
-            position: absolute;
-            width: 20px; }
-        .splash h1.no-transition span {
-            transition: all 0s !important;
-            transform: rotateX(0deg) !important; }
-        .splash span:nth-child(1) {
-            transition: all 0.7s ease 0.125s;
-            left: 31px; }
-        .splash span:nth-child(2) {
-            transition: all 0.7s ease 0.25s;
-            left: 62px; }
-        .splash span:nth-child(3) {
-            transition: all 0.7s ease 0.375s;
-            left: 93px; }
-        .splash span:nth-child(4) {
-            transition: all 0.7s ease 0.5s;
-            left: 124px; }
-        .splash span:nth-child(5) {
-            transition: all 0.7s ease 0.625s;
-            left: 155px; }
-        .splash span:nth-child(6) {
-            transition: all 0.7s ease 0.75s;
-            left: 186px; }
-        .splash span:nth-child(7) {
-            transition: all 0.7s ease 0.875s;
-            left: 217px; }
-        .splash span:nth-child(8) {
-            transition: all 0.7s ease 1s;
-            left: 248px; }
-        .splash span:nth-child(9) {
-            transition: all 0.7s ease 1.125s;
-            left: 279px; }
-        .splash span:nth-child(10) {
-            transition: all 0.7s ease 1.25s;
-            left: 310px; }
-        .splash span:nth-child(11) {
-            transition: all 0.7s ease 1.375s;
-            left: 341px; }
-        .splash span:nth-child(12) {
-            transition: all 0.7s ease 1.5s;
-            left: 372px; }
-        .splash span:nth-child(13) {
-            transition: all 0.7s ease 1.625s;
-            left: 403px; }
-        .splash span:nth-child(14) {
-            transition: all 0.7s ease 1.75s;
-            left: 434px; }
-        .splash span:nth-child(15) {
-            transition: all 0.7s ease 1.875s;
-            left: 465px; }
-        .splash span:nth-child(16) {
-            transition: all 0.7s ease 2s;
-            left: 496px; }
-        .splash h1:hover span {
-            transform: rotateX(360deg);
-            color: deeppink; }
-        .splash html {
-            height: 100%; }
-        .splash body {
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            overflow: hidden;
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            font-weight: bold;
-            font-family: Monaco, Consolas, "Lucida Console", monospace;
-            font-smoothing: antialiased;
-            perspective: 700px;
-            transform-style: preserve-3d;
-            background-color: #ffffff;
-            *zoom: 1;
-            filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFEAE0DE');
-            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VhZTBkZSIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
-            background-size: 100%;
-            background-image: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #eae0de 100%);
-            background-image: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #eae0de 100%);
-            background-image: radial-gradient(ellipse cover at center, #ffffff 0%, #eae0de 100%); }
-        .splash h1 {
-            font-family:Monaco,Consolas,"Lucida Console",monospace;
-            position:absolute;
-            margin-top: -40px;
-            top: 50%;
-            width: 260px;
-            height: 55px;
-            margin-left:-230px;
-            cursor: pointer;
-            left: 50%;
-            font-size: 47px;
-            color: #556270; }
-        .splash .transition span {
-            transform: rotateX(360deg); }
-    </style>
-</head>
-<body>
-
-<div class="splash">
-    <h1 class="no-transition">
-        <span>L</span>
-        <span>o</span>
-        <span>a</span>
-        <span>d</span>
-        <span>i</span>
-        <span>n</span>
-        <span>g</span>
-        <span> </span>
-        <span>A</span>
-        <span>P</span>
-        <span>P</span>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
-    </h1>
-</div>
-
-    <script type="text/javascript">
-
-    var container = document.querySelector( 'h1' );
-    var palette = [ '#4ECDC4', '#A9CF54', '#FF6B6B', '#556270']
-    var paletteIndex = 0;
-
-    var splashInterval = setInterval( function() {
-
-        // Reset spans rotation without transitions
-        container.className = 'no-transition';
-
-        // Debounce change to allow for css changes
-        setTimeout( function() {
-            container.style.color = palette[paletteIndex];
-            container.className = 'transion';
-            paletteIndex += 1;
-            paletteIndex %= palette.length;
-        }, 10 );
-
-
-    }, 2500 );
-
-	
-<style>
-span.small {
-  font-size: smaller;
-}
-</style>
-
-				                            <style>
-  .blink {
-    animation: blink-animation 1s steps(2, start) infinite;
-    -webkit-animation: blink-animation 1s steps(2, start) infinite;
-  }
-
-  @keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
-</style>
-
-                              
-<img class="blink" src="https://i.ibb.co/CpZcVYwD/2025-11-24-under-construction.gif" alt="2025-11-24-under-construction" border="0">
-			
-			
-				
-				
-				
-				
-			</p>
-			    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>numbest_remnant.exe</title>
+    <title>✨ Lullaby Lovescape Digital Diary ✨</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-        
+        :root {
+            --primary: #ff69b4;
+            --secondary: #ffd6e9;
+            --accent: #ffbaf1;
+            --text: #665566;
+            --window-bg: rgba(255, 255, 255, 0.95);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -203,511 +20,574 @@ span.small {
         }
 
         body {
-            background: #000;
-            color: #fff;
-            font-family: 'VT323', monospace;
+            background-color: var(--secondary);
+            font-family: 'Comic Sans MS', cursive;
             overflow-x: hidden;
             min-height: 100vh;
-            cursor: crosshair;
+            background-image: 
+                radial-gradient(#fff 20%, transparent 20%),
+                radial-gradient(#fff 20%, transparent 20%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px;
         }
 
-        .glitch-container {
-            position: relative;
-            min-height: 100vh;
-            background: linear-gradient(87deg, #000, #702d3b, #000);
-            animation: bgPulse 8s ease infinite;
-            padding: 20px;
-        }
-
-        .profile-section {
-            max-width: 800px;
-            margin: 40px auto;
-            background: rgba(0, 0, 0, 0.8);
-            border: 1px solid #a1002b;
-            padding: 20px;
-            position: relative;
+        .desktop-icons {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             z-index: 1;
         }
 
-        .profile-header {
+        .desktop-icon {
+            width: 80px;
+            height: 90px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border: 2px solid #702d3b;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.8) contrast(1.2);
-        }
-
-        .profile-pic::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, #702d3b);
-            animation: glowPulse 4s infinite;
-        }
-
-        .nameplate {
-            font-size: 2.5em;
-            color: #a1002b;
-            text-shadow: 2px 2px ##702d3b;
-            animation: glitchText 3s infinite;
-        }
-
-        .links-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-        .link-button {
-            background: rgba(0, 255, 255, 0.1);
-            border: 1px solid #a1002b;
-            padding: 10px;
-            color: #fff;
-            text-decoration: none;
             text-align: center;
-            transition: all 0.3s;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        .link-button:hover {
-            background: rgba(255, 0, 255, 0.2);
-            transform: scale(1.05);
-            text-shadow: 0 0 5px #a1002b;
+        .desktop-icon:hover {
+            transform: scale(1.1);
         }
 
-        .preferences {
-            display: flex;
-            gap: 20px;
-            margin: 20px 0;
+        .desktop-icon img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            border: 2px solid var(--primary);
+            background: white;
+            padding: 5px;
         }
 
-        .likes, .dislikes {
-            flex: 1;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            border: 1px solid #a1002b;
+        .desktop-icon span {
+            color: var(--text);
+            font-size: 12px;
+            text-shadow: 1px 1px 0 white;
         }
 
-        .spotify-embed {
-            margin: 20px 0;
-            border: 1px solid #a1002b;
+        .window {
+            background: var(--window-bg);
+            border: 3px solid var(--primary);
+            border-radius: 15px;
+            width: 350px;
+            position: absolute;
             padding: 10px;
-        }
-
-        .button-collection {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin: 20px 0;
-            padding: 10px;
-            background: #33000e;
-            border: 1px dashed #0ff;
-        }
-
-        .button-collection img {
-            width: 88px;
-            height: 31px;
-            object-fit: contain;
-        }
-
-        .modal {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: move;
+            backdrop-filter: blur(5px);
             display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #33000e;
-            border: 2px solid #ff00ff;
-            padding: 20px;
-            z-index: 1000;
-            max-width: 80%;
-            max-height: 80vh;
+        }
+
+        .window.active {
+            display: block;
+        }
+
+        .window-title {
+            background: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .button {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .content {
+            padding: 15px;
+            font-size: 14px;
+            color: var(--text);
+            max-height: 400px;
             overflow-y: auto;
         }
 
-        .modal.active {
-            display: block;
-            animation: modalGlitch 0.3s;
+        .content img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
         }
 
-        .modal-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #33000e;
-            cursor: pointer;
-            font-size: 1.5em;
-        }
-
-        @keyframes modalGlitch {
-            0% { transform: translate(-50%, -50%) skew(-10deg); }
-            50% { transform: translate(-50%, -50%) skew(10deg); }
-            100% { transform: translate(-50%, -50%) skew(0deg); }
-        }
-
-        @keyframes glitchText {
-            0% { transform: skew(0deg); }
-            20% { transform: skew(-3deg); color: #0ff; }
-            40% { transform: skew(3deg); color: #ff00ff; }
-            60% { transform: skew(0deg); }
-            80% { transform: skew(2deg); color: #0ff; }
-            100% { transform: skew(0deg); }
-        }
-
-        @keyframes glowPulse {
-            0% { opacity: 0.3; }
-            50% { opacity: 0.7; }
-            100% { opacity: 0.3; }
-        }
-      
-        .floating-entities {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .floating-gif {
-            position: absolute;
-            opacity: 0.3;
-            filter: brightness(0.7) contrast(1.2) hue-rotate(90deg);
-            animation: float-random 20s linear infinite;
-        }
-
-        @keyframes float-random {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(100px, -100px) rotate(180deg); }
-            100% { transform: translate(0, 0) rotate(360deg); }
-        }
-
-        .hud {
-            position: fixed;
-            top: 200px;
-            left: 20px;
-            background: rgba(128, 92, 98);
-            border: 1px solid #805c62;
-            padding: 10px;
-            font-size: 0.8em;
-            z-index: 1000;
-        }
-
-        .hud-data {
-            color: #5c000f;
-            text-shadow: 0 0 5px #ff003c;
-        }
-
-        .marquee-container {
-            overflow: hidden;
-            background: rgba(128, 92, 98);
-            border: 1px dashed #ff003c;
-        }
-
-        .marquee {
+        .profile-card {
             display: flex;
-            animation: scroll 20s linear infinite;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
         }
 
-        .secret-menu {
-            position: fixed;
-            right: -300px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 300px;
-            background: rgba(128, 92, 98);
-            border-left: 2px solid #ff003c;
-            padding: 20px;
-            transition: right 0.3s;
-            z-index: 1000;
+        .profile-info h3 {
+            color: var(--primary);
+            margin-bottom: 5px;
         }
 
-        .secret-menu.active {
-            right: 0;
+        .social-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
         }
 
-        .secret-trigger {
-            position: fixed;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            background: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.2s;
+        }
+
+        .social-link:hover {
+            transform: scale(1.05);
+        }
+
+        .social-link img {
             width: 20px;
-            height: 100px;
-            background: #ff00ff;
-            cursor: pointer;
+            height: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .menu {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: 3px solid var(--primary);
+            display: flex;
+            gap: 25px;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-item:hover {
+            color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        .menu-item img {
+            width: 20px;
+            height: 20px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: slideIn 0.5s ease-out;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .music-player {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 10px;
+            width: 250px;
             z-index: 999;
         }
 
-        .tab-container {
-            margin-top: 20px;
-        }
-
-        .tab-buttons {
-            display: flex;
-            gap: 5px;
+        .music-player img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
             margin-bottom: 10px;
         }
 
-        .tab-button {
-            background: none;
-            border: 1px solid #0ff;
-            color: #0ff;
-            padding: 5px 10px;
+        .music-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .music-control {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        .tab-button.active {
-            background: rgba(128, 92, 98);
-        }
-
-        .tab-content {
-            display: none;
-            padding: 10px;
-            border: 1px solid #0ff;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Particle system */
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
+        .music-control:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
-    
-    <div class="floating-entities">
-        <!-- Floating gifs will be added here via JS -->
-    </div>
-
-    <div class="hud">
-        <div class="hud-data">
-            SYSTEM STATUS: <span id="systemStatus">OPERATIONAL</span><br>
-            ENTROPY LEVEL: <span id="energyLevel">87.3%</span><br>
-            DIGITAL DECAY: <span id="rotLevel">∞</span><br>
-            VOID CONNECTION: <span id="functionStatus">STABLE</span>
+    <div class="desktop-icons">
+        <div class="desktop-icon" onclick="toggleWindow('profile')">
+            <img src="https://files.catbox.moe/kmf4bc.gif" alt="Profile Icon">
+            <span>My Profile</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleWindow('gallery')">
+            <img src="https://files.catbox.moe/3bobcc.gif" alt="Gallery Icon">
+            <span>Gallery</span>
+        </div>
+        <div class="desktop-icon" onclick="toggleWindow('blog')">
+            <img src="https://files.catbox.moe/ia8u2v.gif" alt="Blog Icon">
+            <span>Blog</span>
         </div>
     </div>
 
-    <div class="secret-trigger"></div>
-    <div class="secret-menu">
-        <h3>// hidden_data.log</h3>
-        <div class="tab-container">
-            <div class="tab-buttons">
-                <button class="tab-button active" data-tab="hear">´ཀ`</button>
-                <button class="tab-button" data-tab="see">=͟͟͞͞(꒪ᗜ꒪‧̣̥̇)</button>
-                <button class="tab-button" data-tab="speak">(•᷄ -•᷅ ;) </button>
-            </div>
-            <div class="tab-content active" data-tab="hear">
-              sorry bro i cant hear you over the sound of me sliding down the drain <iframe width="560" height="315" src="https://www.youtube.com/embed/JjwNqsPr6_Y?si=UxW7riRuS_mKUqPX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="tab-content" data-tab="see">
-                see.call(existence) -> undefined<br>
-                corruption: ERROR: personality.data missing. memory_archive.file missing.
-            </div>
-            <div class="tab-content" data-tab="speak">
-                have you ever wondered what life is like beyond the same 4 walls? me too...
+    <div id="profile" class="window" style="top: 50px; left: 150px;">
+        <div class="window-title">
+            ✨ My Profile ✨
+            <div class="buttons">
+                <div class="button" style="background: #ffff4d;" onclick="minimizeWindow('profile')"></div>
+                <div class="button" style="background: #ff6b6b;" onclick="closeWindow('profile')"></div>
             </div>
         </div>
-    </div>
-
-    <div class="glitch-container">
-        <div class="profile-section">
-            <div class="profile-header">
-                <div class="profile-pic">
-                    <img src="https://i.ibb.co/j9sZ7c4w/Eleanor-V2.webp" alt="profile picture">
-                </div>
-                <h1 class="nameplate">╰•★★ P3PP3RM1N7Bunnie ★★•╯</h1>
-            </div>
-
-            <div class="links-section">
-                <a href="#" class="link-button" onclick="showModal('discord')">Discord</a>
-                <a href="#" class="link-button" onclick="showModal('github')">Github</a>
-            </div>
-
-            <div class="preferences">
-                <div class="likes">
-                    <h3>⟦ LIKES ⟧</h3>
-                    <p> draingang, yamikawa/menhera, ado, FFXIV, league of legends, beatdown, depressing japanese songs lol, my little pony gens 1-4, indieweb stuff, making friends, modding games</p>
-                </div>
-                <div class="dislikes">
-                    <h3>⟦ DISLIKES ⟧</h3>
-                    <p> the type of horror where youre isolated, when my pc crashes mid project, league players who are purposely mean to new players, draingang haters, learning blender yet i still try </p>
+        <div class="content">
+            <div class="profile-card">
+                <img src="https://files.catbox.moe/yscv85.gif" alt="Profile Picture" class="profile-image">
+                <div class="profile-info">
+                    <h3>[Your Name]</h3>
+                    <p>✨ Digital Artist</p>
+                    <p>🌸 Web Developer</p>
                 </div>
             </div>
-
-            <div class="spotify-embed">
-                <h3>⟦ CURRENT VIBE ⟧</h3>
-                <p>playlist: <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=WABFaq96ukJYrO7q&amp;list=PL3-JGK3JHSGnsBeIbiyCCNIz9ePx4ldm7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </p>
-            </div>
-
-            <div class="marquee-container">
-                <div class="marquee">
-                    <div class="button-collection">
-                        <img src="https://i.ibb.co/KZ0xhvV/61da4f4c-61b5-4d1d-9718-2d8a8d2541bb.gif" alt="button 1">
-                        <img src="https://i.ibb.co/jvmwy8Tv/2017-quote-11.png" alt="button 2">
-                        <img src="https://i.ibb.co/93k1Pfcb/a1.png" alt="button 3">
-                        <img src="https://i.ibb.co/fYv4g9Z6/ab9211fc-6d89-46d9-a9dd-3cf27d493146.gif" alt="button 4">
-                        <img src="https://i.ibb.co/BHgMVrk6/https://i.ibb.co/Q3sTjFKs/creature.png" alt="button 5">
-                        <img src="https://i.ibb.co/BHgMVrk6/d1k1rkg-688aa045-474f-432a-941e-a0c81f15392d.gif" alt="button 6">
-                        <img src="https://i.ibb.co/99zjwSF8/d1ruqg4-059045a8-6b12-45b3-b246-5b5b3626a16d.gif" alt="button 7">
-                        <img src="https://i.ibb.co/KZ0xhvV/61da4f4c-61b5-4d1d-9718-2d8a8d2541bb.gif" alt="button 8">
-                        <img src="https://i.ibb.co/jvmwy8Tv/2017-quote-11.png" alt="button 9">
-                        <img src="https://i.ibb.co/93k1Pfcb/a1.png" alt="button 10">
-                        <img src="https://i.ibb.co/fYv4g9Z6/ab9211fc-6d89-46d9-a9dd-3cf27d493146.gif" alt="button 11">
-                        <img src="https://i.ibb.co/yB4Z445z/catgirl.png" alt="button 12">
-                        <img src="https://i.ibb.co/Q3sTjFKs/creature.png" alt="button 13">
-                        <img src="https://i.ibb.co/BHgMVrk6/d1k1rkg-688aa045-474f-432a-941e-a0c81f15392d.gif" alt="alt="button 14">
-                        <img src="https://i.ibb.co/99zjwSF8/d1ruqg4-059045a8-6b12-45b3-b246-5b5b3626a16d.gif" alt="button 15">
-                        <img src="https://i.ibb.co/7xZMyq5Q/d8ju1uf-71ad8977-f36a-4063-aa2c-5fd1fde68da9.gif" alt="button 16">
-                        <img src="https://i.ibb.co/j9pzCY9V/da4oeph-636045ea-0556-4bba-b518-bb6ff75a77da.png" alt="button 17">
-                        <img src="https://i.ibb.co/svHHnjHN/dc96bb4-e83a6660-600c-4fca-966d-6e4cb126cac4.gif" alt="button 18">
-                        <img src="https://i.ibb.co/sdZwvqzd/dd98q8x-c509771c-bc9c-4fda-ae2e-6a9eb648d64e.gif" alt="button 19">
-                        <img src="https://i.ibb.co/LmZH1VJ/dd481mx-f0571e9c-93e2-47b6-b009-ef70f22f760f.png" alt="button 20">
-                        <img src="https://i.ibb.co/jv9HQv79/elfie.png" alt="elfie" border="0">
-                        <img src="https://i.ibb.co/Wpz9PLS7/fin.gif" alt="fin" border="0">
-                        <img src="https://i.ibb.co/cXCngv8m/gemini.png" alt="gemini" border="0">
-                        <img src="https://i.ibb.co/KcHRPNbs/girslwho.png" alt="girslwho" border="0">
-                        <img src="https://i.ibb.co/RpSHwHKm/hosie.gif" alt="hosie" border="0">
-                        <img src="https://i.ibb.co/kWdRV0h/iloverainbows.png" alt="iloverainbows" border="0">
-                        <img src="https://i.ibb.co/r2GLZHWD/jermba.png" alt="jermba" border="0">
-                        <img src="https://i.ibb.co/Hfm3105G/lucky.gif" alt="lucky" border="0">
-                        <img src="https://i.ibb.co/BHTgYqgD/paff.gif" alt="paff" border="0">
-                        <img src="https://i.ibb.co/Qv5J7RYq/stuffy.gif" alt="stuffy" border="0">
-                        <img src="https://i.ibb.co/kVWJJGxJ/tetoteto.gif" alt="tetoteto" border="0">
-                    </div>
-                </div>
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/og4nft.gif" alt="Twitter">
+                    Twitter
+                </a>
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/7tzc9c.gif" alt="Instagram">
+                    Instagram
+                </a>
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/dtal07.gif" alt="GitHub">
+                    GitHub
+                </a>
+                <a href="#" class="social-link">
+                    <img src="https://files.catbox.moe/e0ep7c.gif" alt="DeviantArt">
+                    DeviantArt
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Modals -->
-    <div id="discordModal" class="modal">
-        <span class="modal-close" onclick="hideModal('discord')">×</span>
-        <h2>⟦ DISCORD ⟧</h2>
-        <p> peppermintbunnie </p>
+    <div id="gallery" class="window" style="top: 100px; left: 550px;">
+        <div class="window-title">
+            🎨 My Gallery 🎨
+            <div class="buttons">
+                <div class="button" style="background: #ffff4d;" onclick="minimizeWindow('gallery')"></div>
+                <div class="button" style="background: #ff6b6b;" onclick="closeWindow('gallery')"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gallery">
+                <img src="https://files.catbox.moe/cg2dzq.jpg" alt="Artwork 1">
+                <img src="https://files.catbox.moe/zwtdmj.jpg" alt="Artwork 2">
+                <img src="https://files.catbox.moe/unju81.jpg" alt="Artwork 3">
+                <img src="https://files.catbox.moe/qgkkhs.jpg" alt="Artwork 4">
+            </div>
+        </div>
     </div>
 
-    <div id="githubModal" class="modal">
-        <span class="modal-close" onclick="hideModal('github')">×</span>
-        <h2>⟦ GITHUB ⟧</h2>
-        <p> github.com/P3PP3RM1N7Bunnie </p>
+    <div id="blog" class="window" style="top: 150px; left: 350px;">
+        <div class="window-title">
+            📝 Blog Posts 📝
+            <div class="buttons">
+                <div class="button" style="background: #ffff4d;" onclick="minimizeWindow('blog')"></div>
+                <div class="button" style="background: #ff6b6b;" onclick="closeWindow('blog')"></div>
+            </div>
+        </div>
+        <div class="content">
+            <article style="margin-bottom: 20px;">
+                <img src="https://files.catbox.moe/31ivbg.jpg" alt="Blog Post 1">
+                <h3 style="color: var(--primary); margin: 10px 0;">My Latest Project ✨</h3>
+                <p>Working on something super kawaii! Stay tuned for more updates...</p>
+            </article>
+            <article>
+                <img src="https://files.catbox.moe/silz40.jpg" alt="Blog Post 2">
+                <h3 style="color: var(--primary); margin: 10px 0;">Art Process 🎨</h3>
+                <p>Here's a peek into how I create my digital illustrations!</p>
+            </article>
+        </div>
     </div>
 
-  <div id="spaceheyModal" class="modal">
-        <span class="modal-close" onclick="hideModal('spacehey')">×</span>
-        <h2>⟦ SPACEHEY ⟧</h2>
-        <p> spacehey.com/andyoudontseemtounderstand </p>
+    <div class="menu">
+        <a href="#" class="menu-item" onclick="toggleWindow('profile')">
+            <img src="https://files.catbox.moe/9gnuwx.gif" alt="Profile">
+            Profile
+        </a>
+        <a href="#" class="menu-item" onclick="toggleWindow('gallery')">
+            <img src="https://files.catbox.moe/0e0gxm.gif" alt="Gallery">
+            Gallery
+        </a>
+        <a href="#" class="menu-item" onclick="toggleWindow('blog')">
+            <img src="https://files.catbox.moe/3bobcc.gif" alt="Blog">
+            Blog
+        </a>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <div class="music-player">
+        <img src="https://files.catbox.moe/fabe5z.jpg" alt="Album Art">
+        <div class="music-controls">
+            <div class="music-control">⏮</div>
+            <div class="music-control">▶</div>
+            <div class="music-control">⏭</div>
+        </div>
+    </div>
+
     <script>
-        function showModal(type) {
-            document.getElementById(type + 'Modal').classList.add('active');
-        }
+        // Make windows draggable
+        const windows = document.querySelectorAll('.window');
+        windows.forEach(makeWindowDraggable);
 
-        function hideModal(type) {
-            document.getElementById(type + 'Modal').classList.remove('active');
-        }
+        function makeWindowDraggable(element) {
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            element.querySelector('.window-title').onmousedown = dragMouseDown;
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('active');
+            function dragMouseDown(e) {
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+                bringToFront(element);
+            }
+
+            function elementDrag(e) {
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                element.style.top = (element.offsetTop - pos2) + "px";
+                element.style.left = (element.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
             }
         }
 
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80 },
-                color: { value: '#805c62' },
-                shape: { type: 'triangle' },
-                opacity: { value: 0.5 },
-                size: { value: 3 },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#0ff',
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: 'none',
-                    random: true,
-                    out_mode: 'out'
+        function bringToFront(element) {
+            windows.forEach(win => win.style.zIndex = "1"); element.style.zIndex = "2";
+        }
+
+        // Window management functions
+        function toggleWindow(id) {
+            const window = document.getElementById(id);
+            if (window.classList.contains('active')) {
+                window.classList.remove('active');
+            } else {
+                window.classList.add('active');
+                bringToFront(window);
+            }
+        }
+
+        function closeWindow(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+
+        function minimizeWindow(id) {
+            const window = document.getElementById(id);
+            window.style.transform = 'scale(0.1)';
+            setTimeout(() => {
+                window.classList.remove('active');
+                window.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Sparkle effect
+        function createSparkle(e) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.animation = 'sparkle 1s linear forwards';
+            sparkle.textContent = '✨';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() < 0.1) createSparkle(e);
+        });
+
+        // Notification system
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <img src="https://files.catbox.moe/px4tkj.gif" alt="Notification Icon">
+                <div>
+                    <strong>✨ Notice</strong>
+                    <p>${message}</p>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.style.animation = 'slideIn 0.5s ease-out reverse';
+                setTimeout(() => notification.remove(), 500);
+            }, 3000);
+        }
+
+        // Show welcome notification on load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                showNotification('Welcome to my kawaii space! ૮ ˶ᵔ ᵕ ᵔ˶ ა');
+            }, 1000);
+        });
+
+        // Music player functionality
+        const musicControls = document.querySelectorAll('.music-control');
+        let isPlaying = false;
+
+        musicControls.forEach(control => {
+            control.addEventListener('click', () => {
+                if (control.textContent === '▶') {
+                    control.textContent = isPlaying ? '▶' : '⏸';
+                    isPlaying = !isPlaying;
                 }
+                control.style.transform = 'scale(0.9)';
+                setTimeout(() => control.style.transform = 'scale(1)', 100);
+            });
+        });
+
+        // Random floating elements
+        function createFloatingElement() {
+            const elements = ['🌸', '✨', '💖', '🌟', '🎀'];
+            const element = document.createElement('div');
+            element.style.position = 'fixed';
+            element.style.left = Math.random() * window.innerWidth + 'px';
+            element.style.top = window.innerHeight + 'px';
+            element.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            element.style.pointerEvents = 'none';
+            element.style.animation = 'float 3s ease-in-out infinite';
+            element.textContent = elements[Math.floor(Math.random() * elements.length)];
+            document.body.appendChild(element);
+            setTimeout(() => element.remove(), 3000);
+        }
+
+        setInterval(createFloatingElement, 2000);
+
+        // Easter egg - click counter
+        let clickCount = 0;
+        document.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 10) {
+                showNotification('You found a secret! 🎉');
+                document.body.style.animation = 'rainbow 3s infinite';
             }
         });
 
-        // Floating GIFs
-        const floatingGifs = [
-            'https://i.ibb.co/j9sZ7c4w/Eleanor-V2.webp',  // Your profile gif
-            'https://i.ibb.co/BHgMVrk6/d1k1rkg-688aa045-474f-432a-941e-a0c81f15392d.gif',  // Some of your button gifs
-            'https://i.ibb.co/KcHRPNbs/girslwho.png'
-        ];
+        // Add rainbow animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes rainbow {
+                0% { background-color: var(--secondary); }
+                33% { background-color: #ffd6ff; }
+                66% { background-color: #d6ffff; }
+                100% { background-color: var(--secondary); }
+            }
 
-        const entities = document.querySelector('.floating-entities');
-        
-        floatingGifs.forEach((gif, index) => {
-            const img = document.createElement('img');
-            img.src = gif;
-            img.className = 'floating-gif';
-            img.style.top = `${Math.random() * 100}%`;
-            img.style.left = `${Math.random() * 100}%`;
-            img.style.animationDelay = `${index * -3}s`;
-            entities.appendChild(img);
-        });
-
-        // HUD updates
-        setInterval(() => {
-            document.getElementById('energyLevel').textContent = 
-                (Math.random() * 20 + 80).toFixed(1) + '%';
-            document.getElementById('functionStatus').textContent = 
-                Math.random() > 0.1 ? 'STABLE' : 'UNSTABLE';
-            document.getElementById('systemStatus').textContent = 
-                Math.random() > 0.05 ? 'OPERATIONAL' : 'COMPROMISED';
-        }, 2000);
-
-        // Secret menu
-        document.querySelector('.secret-trigger').addEventListener('enter', () => {
-            document.querySelector('.secret-menu').classList.add('active');
-        });
+            @keyframes sparkle {
+                0% { transform: scale(0) rotate(0deg); opacity: 0; }
+                50% { transform: scale(1) rotate(180deg); opacity: 1; }
+                100% { transform: scale(0) rotate(360deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
-		</main>
-		<Footer />
-	</body>
+</body>
 </html>
