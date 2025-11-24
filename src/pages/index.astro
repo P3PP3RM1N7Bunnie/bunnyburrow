@@ -14,10 +14,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<h1>Salve ad Cuniculum Leporinum</h1>
-			<p>
-				                            <blink>Under Construction</blink>
+			
+				                            <style>
+  .blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+    -webkit-animation: blink-animation 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+</style>
+
+                                    <p class="blink">Ｕｎｄｅｒ Ｃｏｎｓｔｒｕｃｔｉｏｎ</p>
 			</p>
-			<p>
+			
 				This template comes with a few integrations already configured in your
 				<code>astro.config.mjs</code> file. You can customize your setup with
 				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
