@@ -67,7 +67,7 @@ span.small {
         .glitch-container {
             position: relative;
             min-height: 100vh;
-            background: linear-gradient(45deg, #000, #001a3a, #000);
+            background: linear-gradient(87deg, #000, #702d3b, #000);
             animation: bgPulse 8s ease infinite;
             padding: 20px;
         }
@@ -76,7 +76,7 @@ span.small {
             max-width: 800px;
             margin: 40px auto;
             background: rgba(0, 0, 0, 0.8);
-            border: 1px solid #0ff;
+            border: 1px solid #a1002b;
             padding: 20px;
             position: relative;
             z-index: 1;
@@ -92,7 +92,7 @@ span.small {
         .profile-pic {
             width: 150px;
             height: 150px;
-            border: 2px solid #ff00ff;
+            border: 2px solid #702d3b;
             position: relative;
             overflow: hidden;
         }
@@ -111,14 +111,14 @@ span.small {
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent, #ff00ff33);
+            background: linear-gradient(45deg, transparent, #702d3b);
             animation: glowPulse 4s infinite;
         }
 
         .nameplate {
             font-size: 2.5em;
-            color: #0ff;
-            text-shadow: 2px 2px #ff00ff;
+            color: #a1002b;
+            text-shadow: 2px 2px ##702d3b;
             animation: glitchText 3s infinite;
         }
 
@@ -131,7 +131,7 @@ span.small {
 
         .link-button {
             background: rgba(0, 255, 255, 0.1);
-            border: 1px solid #0ff;
+            border: 1px solid #a1002b;
             padding: 10px;
             color: #fff;
             text-decoration: none;
@@ -142,7 +142,7 @@ span.small {
         .link-button:hover {
             background: rgba(255, 0, 255, 0.2);
             transform: scale(1.05);
-            text-shadow: 0 0 5px #ff00ff;
+            text-shadow: 0 0 5px #a1002b;
         }
 
         .preferences {
@@ -155,12 +155,12 @@ span.small {
             flex: 1;
             background: rgba(0, 0, 0, 0.5);
             padding: 15px;
-            border: 1px solid #0ff;
+            border: 1px solid #a1002b;
         }
 
         .spotify-embed {
             margin: 20px 0;
-            border: 1px solid #ff00ff;
+            border: 1px solid #a1002b;
             padding: 10px;
         }
 
@@ -170,7 +170,7 @@ span.small {
             gap: 5px;
             margin: 20px 0;
             padding: 10px;
-            background: rgba(0, 0, 0, 0.5);
+            background: #33000e;
             border: 1px dashed #0ff;
         }
 
@@ -186,7 +186,7 @@ span.small {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.95);
+            background: #33000e;
             border: 2px solid #ff00ff;
             padding: 20px;
             z-index: 1000;
@@ -204,7 +204,7 @@ span.small {
             position: absolute;
             top: 10px;
             right: 10px;
-            color: #ff00ff;
+            color: #33000e;
             cursor: pointer;
             font-size: 1.5em;
         }
@@ -257,7 +257,7 @@ span.small {
             position: fixed;
             top: 20px;
             left: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(128, 92, 98);
             border: 1px solid #0ff;
             padding: 10px;
             font-size: 0.8em;
@@ -271,7 +271,7 @@ span.small {
 
         .marquee-container {
             overflow: hidden;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(128, 92, 98);
             border: 1px dashed #ff00ff;
         }
 
@@ -291,7 +291,7 @@ span.small {
             top: 50%;
             transform: translateY(-50%);
             width: 300px;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(128, 92, 98);
             border-left: 2px solid #ff00ff;
             padding: 20px;
             transition: right 0.3s;
@@ -333,7 +333,7 @@ span.small {
         }
 
         .tab-button.active {
-            background: rgba(0, 255, 255, 0.2);
+            background: rgba(128, 92, 98);
         }
 
         .tab-content {
@@ -368,30 +368,30 @@ span.small {
     <div class="hud">
         <div class="hud-data">
             SYSTEM STATUS: <span id="systemStatus">OPERATIONAL</span><br>
-            ENTROPY LEVEL: <span id="entropyLevel">87.3%</span><br>
-            DIGITAL DECAY: <span id="decayLevel">∞</span><br>
-            VOID CONNECTION: <span id="voidStatus">STABLE</span>
+            ENTROPY LEVEL: <span id="energyLevel">87.3%</span><br>
+            DIGITAL DECAY: <span id="rotLevel">∞</span><br>
+            VOID CONNECTION: <span id="functionStatus">STABLE</span>
         </div>
     </div>
 
     <div class="secret-trigger"></div>
     <div class="secret-menu">
-        <h3>// hidden_thoughts.log</h3>
+        <h3>// hidden_data.log</h3>
         <div class="tab-container">
             <div class="tab-buttons">
-                <button class="tab-button active" data-tab="thoughts">思考</button>
-                <button class="tab-button" data-tab="void">虚無</button>
-                <button class="tab-button" data-tab="dreams">夢</button>
+                <button class="tab-button active" data-tab="hear">´ཀ`</button>
+                <button class="tab-button" data-tab="see">=͟͟͞͞(꒪ᗜ꒪‧̣̥̇)</button>
+                <button class="tab-button" data-tab="speak">(•᷄ -•᷅ ;) </button>
             </div>
-            <div class="tab-content active" data-tab="thoughts">
-                sometimes i wonder if we're all just NPCs in someone else's simulation... maybe the glitches in my renders are actually glitches in the matrix (⊙_⊙)
+            <div class="tab-content active" data-tab="hear">
+              sorry bro i cant hear you over the sound of me sliding down the drain <iframe width="560" height="315" src="https://www.youtube.com/embed/JjwNqsPr6_Y?si=UxW7riRuS_mKUqPX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div class="tab-content" data-tab="void">
-                void.call(existence) -> undefined<br>
-                error: consciousness.exe has stopped working
+            <div class="tab-content" data-tab="see">
+                see.call(existence) -> undefined<br>
+                corruption: ERROR: personality.data missing. memory_archive.file missing.
             </div>
-            <div class="tab-content" data-tab="dreams">
-                last night i dreamed i was a ghost in the machine, floating through endless corridors of code... it felt more real than reality tbh
+            <div class="tab-content" data-tab="speak">
+                have you ever wondered what life is like beyond the same 4 walls? me too...
             </div>
         </div>
     </div>
@@ -400,44 +400,66 @@ span.small {
         <div class="profile-section">
             <div class="profile-header">
                 <div class="profile-pic">
-                    <img src="https://files.catbox.moe/6pme78.gif" alt="profile picture">
+                    <img src="https://i.ibb.co/j9sZ7c4w/Eleanor-V2.webp" alt="profile picture">
                 </div>
-                <h1 class="nameplate">♥Ƹ̵̡Ӝ̵̨̄Ʒ♥ ethephtet.𝖊𝖝𝖊 ♥Ƹ̵̡Ӝ̵̨̄Ʒ♥</h1>
+                <h1 class="nameplate">╰•★★ P3PP3RM1N7Bunnie ★★•╯</h1>
             </div>
 
             <div class="links-section">
                 <a href="#" class="link-button" onclick="showModal('discord')">Discord</a>
                 <a href="#" class="link-button" onclick="showModal('github')">Github</a>
-                <a href="#" class="link-button" onclick="showModal('lastfm')">Last.fm</a>
-                <a href="#" class="link-button" onclick="showModal('blender')">Blender Portfolio</a>
             </div>
 
             <div class="preferences">
                 <div class="likes">
                     <h3>⟦ LIKES ⟧</h3>
-                    <p>sewerslvt, machine girl, blender, low poly aesthetics, circuit bending, VR chat worlds that make you question reality</p>
+                    <p> draingang, yamikawa/menhera, ado, FFXIV, league of legends, beatdown, depressing japanese songs lol, my little pony gens 1-4, indieweb stuff, making friends, modding games</p>
                 </div>
                 <div class="dislikes">
                     <h3>⟦ DISLIKES ⟧</h3>
-                    <p>normie aesthetics, mortality, school, when my renders crash at 99%, people who don't understand drain gang</p>
+                    <p> the type of horror where youre isolated, when my pc crashes mid project, league players who are purposely mean to new players, draingang haters, learning blender yet i still try </p>
                 </div>
             </div>
 
             <div class="spotify-embed">
                 <h3>⟦ CURRENT VIBE ⟧</h3>
-                <p>playlist: //voltage_decay_volume_III//</p>
+                <p>playlist: <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=WABFaq96ukJYrO7q&amp;list=PL3-JGK3JHSGnsBeIbiyCCNIz9ePx4ldm7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> </p>
             </div>
 
             <div class="marquee-container">
                 <div class="marquee">
                     <div class="button-collection">
-                        <img src="https://files.catbox.moe/rb4qfy.gif" alt="button 1">
-                        <img src="https://files.catbox.moe/twmryi.png" alt="button 2">
-                        <img src="https://files.catbox.moe/xev1n0.gif" alt="button 3">
-                        <img src="https://files.catbox.moe/l8juvd.png" alt="button 4">
-                        <img src="https://files.catbox.moe/ws7ds1.png" alt="button 5">
-                        <img src="https://files.catbox.moe/84hkez.gif" alt="button 6">
-                        <img src="https://files.catbox.moe/pp4gx6.gif" alt="button 7">
+                        <img src="https://i.ibb.co/KZ0xhvV/61da4f4c-61b5-4d1d-9718-2d8a8d2541bb.gif" alt="button 1">
+                        <img src="https://i.ibb.co/jvmwy8Tv/2017-quote-11.png" alt="button 2">
+                        <img src="https://i.ibb.co/93k1Pfcb/a1.png" alt="button 3">
+                        <img src="https://i.ibb.co/fYv4g9Z6/ab9211fc-6d89-46d9-a9dd-3cf27d493146.gif" alt="button 4">
+                        <img src="https://i.ibb.co/BHgMVrk6/https://i.ibb.co/Q3sTjFKs/creature.png" alt="button 5">
+                        <img src="https://i.ibb.co/BHgMVrk6/d1k1rkg-688aa045-474f-432a-941e-a0c81f15392d.gif" alt="button 6">
+                        <img src="https://i.ibb.co/99zjwSF8/d1ruqg4-059045a8-6b12-45b3-b246-5b5b3626a16d.gif" alt="button 7">
+                        <img src="https://i.ibb.co/KZ0xhvV/61da4f4c-61b5-4d1d-9718-2d8a8d2541bb.gif" alt="button 8">
+                        <img src="https://i.ibb.co/jvmwy8Tv/2017-quote-11.png" alt="button 9">
+                        <img src="https://i.ibb.co/93k1Pfcb/a1.png" alt="button 10">
+                        <img src="https://i.ibb.co/fYv4g9Z6/ab9211fc-6d89-46d9-a9dd-3cf27d493146.gif" alt="button 11">
+                        <img src="https://i.ibb.co/yB4Z445z/catgirl.png" alt="button 12">
+                        <img src="https://i.ibb.co/Q3sTjFKs/creature.png" alt="button 13">
+                        <img src="https://i.ibb.co/BHgMVrk6/d1k1rkg-688aa045-474f-432a-941e-a0c81f15392d.gif" alt="alt="button 14">
+                        <img src="https://i.ibb.co/99zjwSF8/d1ruqg4-059045a8-6b12-45b3-b246-5b5b3626a16d.gif" alt="button 15">
+                        <img src="https://i.ibb.co/7xZMyq5Q/d8ju1uf-71ad8977-f36a-4063-aa2c-5fd1fde68da9.gif" alt="button 16">
+                        <img src="https://i.ibb.co/j9pzCY9V/da4oeph-636045ea-0556-4bba-b518-bb6ff75a77da.png" alt="button 17">
+                        <img src="https://i.ibb.co/svHHnjHN/dc96bb4-e83a6660-600c-4fca-966d-6e4cb126cac4.gif" alt="button 18">
+                        <img src="https://i.ibb.co/sdZwvqzd/dd98q8x-c509771c-bc9c-4fda-ae2e-6a9eb648d64e.gif" alt="button 19">
+                        <img src="https://i.ibb.co/LmZH1VJ/dd481mx-f0571e9c-93e2-47b6-b009-ef70f22f760f.png" alt="button 20">
+                        <img src="https://i.ibb.co/jv9HQv79/elfie.png" alt="elfie" border="0">
+                        <img src="https://i.ibb.co/Wpz9PLS7/fin.gif" alt="fin" border="0">
+                        <img src="https://i.ibb.co/cXCngv8m/gemini.png" alt="gemini" border="0">
+                        <img src="https://i.ibb.co/KcHRPNbs/girslwho.png" alt="girslwho" border="0">
+                        <img src="https://i.ibb.co/RpSHwHKm/hosie.gif" alt="hosie" border="0">
+                        <img src="https://i.ibb.co/kWdRV0h/iloverainbows.png" alt="iloverainbows" border="0">
+                        <img src="https://i.ibb.co/r2GLZHWD/jermba.png" alt="jermba" border="0">
+                        <img src="https://i.ibb.co/Hfm3105G/lucky.gif" alt="lucky" border="0">
+                        <img src="https://i.ibb.co/BHTgYqgD/paff.gif" alt="paff" border="0">
+                        <img src="https://i.ibb.co/Qv5J7RYq/stuffy.gif" alt="stuffy" border="0">
+                        <img src="https://i.ibb.co/kVWJJGxJ/tetoteto.gif" alt="tetoteto" border="0">
                     </div>
                 </div>
             </div>
@@ -448,13 +470,19 @@ span.small {
     <div id="discordModal" class="modal">
         <span class="modal-close" onclick="hideModal('discord')">×</span>
         <h2>⟦ DISCORD ⟧</h2>
-        <p>xXdigital_decay_666Xx#0000</p>
+        <p>peppermintbunnie</p>
     </div>
 
     <div id="githubModal" class="modal">
         <span class="modal-close" onclick="hideModal('github')">×</span>
         <h2>⟦ GITHUB ⟧</h2>
-        <p>github.com/digital_decay_dev</p>
+        <p>github.com/P3PP3RM1N7Bunnie</p>
+    </div>
+
+  <div id="spaceheyModal" class="modal">
+        <span class="modal-close" onclick="hideModal('spacehey')">×</span>
+        <h2>⟦ SPACEHEY ⟧</h2>
+        <p>spacehey.com/andyoudontseemtounderstand</p>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
@@ -477,7 +505,7 @@ span.small {
         particlesJS('particles-js', {
             particles: {
                 number: { value: 80 },
-                color: { value: '#0ff' },
+                color: { value: '#805c62' },
                 shape: { type: 'triangle' },
                 opacity: { value: 0.5 },
                 size: { value: 3 },
@@ -500,9 +528,9 @@ span.small {
 
         // Floating GIFs
         const floatingGifs = [
-            'https://files.catbox.moe/6pme78.gif',  // Your profile gif
-            'https://files.catbox.moe/rb4qfy.gif',  // Some of your button gifs
-            'https://files.catbox.moe/84hkez.gif'
+            'https://i.ibb.co/j9sZ7c4w/Eleanor-V2.webp',  // Your profile gif
+            'https://i.ibb.co/BHgMVrk6/d1k1rkg-688aa045-474f-432a-941e-a0c81f15392d.gif',  // Some of your button gifs
+            'https://i.ibb.co/KcHRPNbs/girslwho.png'
         ];
 
         const entities = document.querySelector('.floating-entities');
@@ -519,16 +547,16 @@ span.small {
 
         // HUD updates
         setInterval(() => {
-            document.getElementById('entropyLevel').textContent = 
+            document.getElementById('energyLevel').textContent = 
                 (Math.random() * 20 + 80).toFixed(1) + '%';
-            document.getElementById('voidStatus').textContent = 
+            document.getElementById('functionStatus').textContent = 
                 Math.random() > 0.1 ? 'STABLE' : 'UNSTABLE';
             document.getElementById('systemStatus').textContent = 
                 Math.random() > 0.05 ? 'OPERATIONAL' : 'COMPROMISED';
         }, 2000);
 
         // Secret menu
-        document.querySelector('.secret-trigger').addEventListener('mouseenter', () => {
+        document.querySelector('.secret-trigger').addEventListener('enter', () => {
             document.querySelector('.secret-menu').classList.add('active');
         });
     </script>
