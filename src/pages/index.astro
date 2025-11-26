@@ -335,19 +335,15 @@
             <div class="profile-card">
                 <img src="https://files.catbox.moe/yscv85.gif" alt="Profile Picture" class="profile-image">
                 <div class="profile-info">
-                    <h3>[Your Name]</h3>
+                    <h3>Bunnie</h3>
                     <p>✨ Digital Artist</p>
-                    <p>🌸 Web Developer</p>
+                    <p>🌸 Learning to mod</p>
                 </div>
             </div>
             <div class="social-links">
                 <a href="#" class="social-link">
-                    <img src="https://files.catbox.moe/og4nft.gif" alt="Twitter">
-                    Twitter
-                </a>
-                <a href="#" class="social-link">
                     <img src="https://files.catbox.moe/7tzc9c.gif" alt="Instagram">
-                    Instagram
+                    SpaceHey
                 </a>
                 <a href="#" class="social-link">
                     <img src="https://files.catbox.moe/dtal07.gif" alt="GitHub">
@@ -355,7 +351,7 @@
                 </a>
                 <a href="#" class="social-link">
                     <img src="https://files.catbox.moe/e0ep7c.gif" alt="DeviantArt">
-                    DeviantArt
+                    Discord
                 </a>
             </div>
         </div>
@@ -426,7 +422,6 @@
     </div>
 
     <script>
-        // Make windows draggable
         const windows = document.querySelectorAll('.window');
         windows.forEach(makeWindowDraggable);
 
@@ -463,7 +458,6 @@
             windows.forEach(win => win.style.zIndex = "1"); element.style.zIndex = "2";
         }
 
-        // Window management functions
         function toggleWindow(id) {
             const window = document.getElementById(id);
             if (window.classList.contains('active')) {
@@ -487,7 +481,6 @@
             }, 300);
         }
 
-        // Sparkle effect
         function createSparkle(e) {
             const sparkle = document.createElement('div');
             sparkle.style.position = 'fixed';
@@ -504,7 +497,6 @@
             if (Math.random() < 0.1) createSparkle(e);
         });
 
-        // Notification system
         function showNotification(message) {
             const notification = document.createElement('div');
             notification.className = 'notification';
@@ -522,14 +514,13 @@
             }, 3000);
         }
 
-        // Show welcome notification on load
         window.addEventListener('load', () => {
             setTimeout(() => {
                 showNotification('Welcome to my kawaii space! ૮ ˶ᵔ ᵕ ᵔ˶ ა');
             }, 1000);
         });
 
-        // Music player functionality
+
         const musicControls = document.querySelectorAll('.music-control');
         let isPlaying = false;
 
@@ -544,7 +535,7 @@
             });
         });
 
-        // Random floating elements
+
         function createFloatingElement() {
             const elements = ['🌸', '✨', '💖', '🌟', '🎀'];
             const element = document.createElement('div');
@@ -561,7 +552,6 @@
 
         setInterval(createFloatingElement, 2000);
 
-        // Easter egg - click counter
         let clickCount = 0;
         document.addEventListener('click', () => {
             clickCount++;
@@ -571,7 +561,6 @@
             }
         });
 
-        // Add rainbow animation
         const style = document.createElement('style');
         style.textContent = `
             @keyframes rainbow {
